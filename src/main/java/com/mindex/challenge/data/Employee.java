@@ -57,6 +57,21 @@ public class Employee {
         return directReports;
     }
 
+    //return the number of reports under an employee and their reports
+    public int getNumberOfReports() {
+        int numReports = 0; 
+
+        //check if employee has any direct reports
+        if (directReports != null) {
+            //recursively go through each employee and their direct reports
+            for (Employee employee: directReports) {
+                numReports += (1 + employee.getNumberOfReports());
+            }
+        }
+        
+        return numReports;
+    }
+
     public void setDirectReports(List<Employee> directReports) {
         this.directReports = directReports;
     }
