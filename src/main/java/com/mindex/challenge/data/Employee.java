@@ -1,13 +1,6 @@
 package com.mindex.challenge.data;
 
-import java.util.ArrayList;
 import java.util.List;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.mindex.challenge.controller.EmployeeController;
 
 public class Employee {
     private String employeeId;
@@ -16,8 +9,6 @@ public class Employee {
     private String position;
     private String department;
     private List<Employee> directReports;
-
-    private static final Logger LOG = LoggerFactory.getLogger(Employee.class);
 
     public Employee() {
     }

@@ -50,10 +50,12 @@ public class EmployeeController {
     public ReportingStructure readReport(@PathVariable String id) {
         LOG.debug("Received request for report under User [{}]", id);
 
-        //get employee by id
+        // get employee by id
         Employee employee = employeeService.read(id);
 
-        //set attributes of employee's direct reports
+        // excluding id, all attributes including direct reports are currently null 
+        // for all employees under a given a employee
+        // therefore, set attributes of employee's direct reports
         List<Employee> employeeDirectReports = new ArrayList<Employee>();
         for (Employee directReport: employee.getDirectReports()) {
             directReport = employeeService.read(directReport.getEmployeeId());
@@ -61,9 +63,11 @@ public class EmployeeController {
         }
         employee.setDirectReports(employeeDirectReports);
 
-        //create report
-        ReportingStructure report = new ReportingStructure(employee);
-        //make sure report has correct values
+        // create report
+        ReportingStructure report = new ReportingStructure();
+        report.setEmployee(employee);
+        report.setNumberOfReports();
+        // make sure report has correct values
         LOG.debug("User [{}] has [{}] reports.", report.employee.getEmployeeId(), report.numberOfReports);
 
         return report;

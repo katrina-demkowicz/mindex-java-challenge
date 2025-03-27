@@ -46,7 +46,7 @@ public class EmployeeServiceImplTest {
     public void setup() {
         employeeUrl = "http://localhost:" + port + "/employee";
         employeeIdUrl = "http://localhost:" + port + "/employee/{id}";
-        //added url to get a ReportingStructure object for an employee
+        // added url to get a ReportingStructure object for an employee
         employeeReportUrl = "http://localhost:" + port + "/report/{id}";
     }
 
@@ -87,17 +87,17 @@ public class EmployeeServiceImplTest {
 
         /*
          * I added testing for ReportingStructure here in this file due to the convience
-         * of using the declared employee Urls for making a John Lennon mock employee
+         * of using the declared employee Urls for making a John Lennon mock employee object
         */
 
         // Read report check
-        //set reportEmployee as John Lennon
+        // set reportEmployee as John Lennon
         String reportEmployeeID = "16a596ae-edd3-4847-99fe-c4518e82c86f";
         Employee reportEmployee = restTemplate.getForEntity(employeeIdUrl, Employee.class, reportEmployeeID).getBody();
 
-        //get John Lennon's report
+        // get John Lennon's report
         ReportingStructure report = restTemplate.getForEntity(employeeReportUrl, ReportingStructure.class, reportEmployee.getEmployeeId()).getBody();
-        //the number of reports under John Lennon should be 4
+        // the number of reports under John Lennon should be 4
         assertEquals(4, report.numberOfReports);
     }
 
