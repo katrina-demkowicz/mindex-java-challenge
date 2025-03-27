@@ -46,4 +46,16 @@ public class EmployeeServiceImpl implements EmployeeService {
 
         return employeeRepository.save(employee);
     }
+
+    public boolean employeeExists(String id) {
+
+        Employee employee = employeeRepository.findByEmployeeId(id);
+        boolean exists = false;
+
+        if (employee != null) {
+            exists = true;
+        }
+
+        return exists;
+    }
 }
