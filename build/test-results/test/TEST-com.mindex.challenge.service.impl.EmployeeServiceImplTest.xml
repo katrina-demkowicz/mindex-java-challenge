@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.mindex.challenge.service.impl.EmployeeServiceImplTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-03-27T18:03:42" hostname="KATSCOMPUTER" time="0.101">
+<testsuite name="com.mindex.challenge.service.impl.EmployeeServiceImplTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-03-27T20:14:07" hostname="KATSCOMPUTER" time="0.073">
   <properties/>
-  <testcase name="testCreateReadUpdate" classname="com.mindex.challenge.service.impl.EmployeeServiceImplTest" time="0.101"/>
-  <system-out><![CDATA[2025-03-27T14:03:42.416-04:00  INFO 21336 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mindex.challenge.service.impl.EmployeeServiceImplTest]: EmployeeServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2025-03-27T14:03:42.416-04:00  INFO 21336 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mindex.challenge.ChallengeApplication for test class com.mindex.challenge.service.impl.EmployeeServiceImplTest
-2025-03-27T14:03:42.459-04:00 DEBUG 21336 --- [o-auto-1-exec-8] c.m.c.controller.EmployeeController      : Received employee create request for [com.mindex.challenge.data.Employee@2ae16122]
-2025-03-27T14:03:42.459-04:00 DEBUG 21336 --- [o-auto-1-exec-8] c.m.c.service.impl.EmployeeServiceImpl   : Creating employee [com.mindex.challenge.data.Employee@2ae16122]
-2025-03-27T14:03:42.475-04:00 DEBUG 21336 --- [o-auto-1-exec-4] c.m.c.controller.EmployeeController      : Received employee create request for id [620c3418-e8fd-45e0-a6db-c9c22f89dd54]
-2025-03-27T14:03:42.475-04:00 DEBUG 21336 --- [o-auto-1-exec-4] c.m.c.service.impl.EmployeeServiceImpl   : Creating employee with id [620c3418-e8fd-45e0-a6db-c9c22f89dd54]
-2025-03-27T14:03:42.475-04:00 DEBUG 21336 --- [o-auto-1-exec-5] c.m.c.controller.EmployeeController      : Received employee create request for id [620c3418-e8fd-45e0-a6db-c9c22f89dd54] and employee [com.mindex.challenge.data.Employee@20970af8]
-2025-03-27T14:03:42.475-04:00 DEBUG 21336 --- [o-auto-1-exec-5] c.m.c.service.impl.EmployeeServiceImpl   : Updating employee [com.mindex.challenge.data.Employee@20970af8]
-2025-03-27T14:03:42.496-04:00 DEBUG 21336 --- [o-auto-1-exec-7] c.m.c.controller.EmployeeController      : Received employee create request for id [16a596ae-edd3-4847-99fe-c4518e82c86f]
-2025-03-27T14:03:42.496-04:00 DEBUG 21336 --- [o-auto-1-exec-7] c.m.c.service.impl.EmployeeServiceImpl   : Creating employee with id [16a596ae-edd3-4847-99fe-c4518e82c86f]
-2025-03-27T14:03:42.506-04:00 DEBUG 21336 --- [o-auto-1-exec-6] c.m.c.controller.EmployeeController      : Received request for report under User [16a596ae-edd3-4847-99fe-c4518e82c86f]
-2025-03-27T14:03:42.506-04:00 DEBUG 21336 --- [o-auto-1-exec-6] c.m.c.service.impl.EmployeeServiceImpl   : Creating employee with id [16a596ae-edd3-4847-99fe-c4518e82c86f]
-2025-03-27T14:03:42.506-04:00 DEBUG 21336 --- [o-auto-1-exec-6] c.m.c.service.impl.EmployeeServiceImpl   : Creating employee with id [b7839309-3348-463b-a7e3-5de1c168beb3]
-2025-03-27T14:03:42.506-04:00 DEBUG 21336 --- [o-auto-1-exec-6] c.m.c.service.impl.EmployeeServiceImpl   : Creating employee with id [03aa1462-ffa9-4978-901b-7c001562cf6f]
-2025-03-27T14:03:42.522-04:00 DEBUG 21336 --- [o-auto-1-exec-6] c.m.c.controller.EmployeeController      : User [16a596ae-edd3-4847-99fe-c4518e82c86f] has [4] reports.
+  <testcase name="testCreateReadUpdate" classname="com.mindex.challenge.service.impl.EmployeeServiceImplTest" time="0.073"/>
+  <system-out><![CDATA[2025-03-27T16:14:07.955-04:00  INFO 21000 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mindex.challenge.service.impl.EmployeeServiceImplTest]: EmployeeServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-27T16:14:07.957-04:00  INFO 21000 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mindex.challenge.ChallengeApplication for test class com.mindex.challenge.service.impl.EmployeeServiceImplTest
+2025-03-27T16:14:07.974-04:00 DEBUG 21000 --- [o-auto-1-exec-3] c.m.c.controller.EmployeeController      : Received employee create request for [com.mindex.challenge.data.Employee@37f1f548]
+2025-03-27T16:14:07.974-04:00 DEBUG 21000 --- [o-auto-1-exec-3] c.m.c.service.impl.EmployeeServiceImpl   : Creating employee [com.mindex.challenge.data.Employee@37f1f548]
+2025-03-27T16:14:07.981-04:00 DEBUG 21000 --- [o-auto-1-exec-4] c.m.c.controller.EmployeeController      : Received employee create request for id [99efefe4-f37e-4dee-af88-47da60384949]
+2025-03-27T16:14:07.981-04:00 DEBUG 21000 --- [o-auto-1-exec-4] c.m.c.service.impl.EmployeeServiceImpl   : Creating employee with id [99efefe4-f37e-4dee-af88-47da60384949]
+2025-03-27T16:14:07.991-04:00 DEBUG 21000 --- [o-auto-1-exec-5] c.m.c.controller.EmployeeController      : Received employee create request for id [99efefe4-f37e-4dee-af88-47da60384949] and employee [com.mindex.challenge.data.Employee@5f183200]
+2025-03-27T16:14:07.991-04:00 DEBUG 21000 --- [o-auto-1-exec-5] c.m.c.service.impl.EmployeeServiceImpl   : Updating employee [com.mindex.challenge.data.Employee@5f183200]
+2025-03-27T16:14:08.001-04:00 DEBUG 21000 --- [o-auto-1-exec-6] c.m.c.controller.EmployeeController      : Received employee create request for id [16a596ae-edd3-4847-99fe-c4518e82c86f]
+2025-03-27T16:14:08.002-04:00 DEBUG 21000 --- [o-auto-1-exec-6] c.m.c.service.impl.EmployeeServiceImpl   : Creating employee with id [16a596ae-edd3-4847-99fe-c4518e82c86f]
+2025-03-27T16:14:08.017-04:00 DEBUG 21000 --- [o-auto-1-exec-7] c.m.c.controller.EmployeeController      : Received request for report under User [16a596ae-edd3-4847-99fe-c4518e82c86f]
+2025-03-27T16:14:08.017-04:00 DEBUG 21000 --- [o-auto-1-exec-7] c.m.c.service.impl.EmployeeServiceImpl   : Creating employee with id [16a596ae-edd3-4847-99fe-c4518e82c86f]
+2025-03-27T16:14:08.022-04:00 DEBUG 21000 --- [o-auto-1-exec-7] c.m.c.service.impl.EmployeeServiceImpl   : Creating employee with id [b7839309-3348-463b-a7e3-5de1c168beb3]
+2025-03-27T16:14:08.025-04:00 DEBUG 21000 --- [o-auto-1-exec-7] c.m.c.service.impl.EmployeeServiceImpl   : Creating employee with id [03aa1462-ffa9-4978-901b-7c001562cf6f]
+2025-03-27T16:14:08.028-04:00 DEBUG 21000 --- [o-auto-1-exec-7] c.m.c.controller.EmployeeController      : User [16a596ae-edd3-4847-99fe-c4518e82c86f] has [4] reports.
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

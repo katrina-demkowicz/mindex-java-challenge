@@ -17,6 +17,7 @@ public class CompensationServiceImpl implements CompensationService {
     @Autowired
     private CompensationRepository compensationRepository;
 
+    // use employeeService to validate employees
     @Autowired
     private EmployeeServiceImpl employeeService;
 
@@ -25,7 +26,7 @@ public class CompensationServiceImpl implements CompensationService {
         String employeeId = compensation.getEmployeeId();
         LOG.debug("Creating compensation [{}] for employee [{}]", compensation, employeeId);
 
-        //validate the employee whos compensation info is being created exists
+        //  validate the employee whos compensation info is being created exists
         if (employeeService.employeeExists(employeeId) == false) {
             throw new RuntimeException("Invalid employeeId: " + employeeId);
         }
@@ -40,7 +41,7 @@ public class CompensationServiceImpl implements CompensationService {
     public Compensation read(String employeeId) {
         LOG.debug("Creating compensation for employee [{}]", employeeId);
 
-        //validate the employee whos compensation info is being created exists
+        // validate the employee whos compensation info is being created exists
         if (employeeService.employeeExists(employeeId) == false) {
             throw new RuntimeException("Invalid employeeId: " + employeeId);
         }
@@ -51,6 +52,7 @@ public class CompensationServiceImpl implements CompensationService {
         if (compensation == null) {
             throw new RuntimeException("Invalid compensation for employee: " + employeeId);
         }
+        LOG.debug("compensationId: [{}]", compensation.getCompensationId());
 
         return compensation;
     }

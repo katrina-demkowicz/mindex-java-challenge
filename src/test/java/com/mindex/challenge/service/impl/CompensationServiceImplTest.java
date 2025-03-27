@@ -11,9 +11,7 @@ import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.mindex.challenge.dao.EmployeeRepository;
 import com.mindex.challenge.data.Compensation;
-import com.mindex.challenge.data.Employee;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -64,6 +62,7 @@ public class CompensationServiceImplTest {
         Compensation readCompensation = restTemplate.getForEntity(compensationEmployeeIdUrl, Compensation.class, compensationEmployeeId).getBody();
         assertEquals(createdCompensation.getCompensationId(), readCompensation.getCompensationId());
         assertCompensationEquivalence(createdCompensation, readCompensation);
+
     }
 
     private static void assertCompensationEquivalence(Compensation expected, Compensation actual) {
