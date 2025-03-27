@@ -1,7 +1,12 @@
 package com.mindex.challenge.controller;
 
 import com.mindex.challenge.data.Employee;
+import com.mindex.challenge.data.ReportingStructure;
 import com.mindex.challenge.service.EmployeeService;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,5 +44,32 @@ public class EmployeeController {
 
         employee.setEmployeeId(id);
         return employeeService.update(employee);
+    }
+
+    @GetMapping("/report/{id}")
+    public ReportingStructure readReport(@PathVariable String id) {
+        LOG.debug("Received request for report under User [{}]", id);
+
+        // get employee by id
+        Employee employee = employeeService.read(id);
+
+        // excluding id, all attributes including direct reports are currently null 
+        // for all employees under a given a employee
+        // therefore, set attributes of employee's direct reports
+        List<Employee> employeeDirectReports = new ArrayList<Employee>();
+        for (Employee directReport: employee.getDirectReports()) {
+            directReport = employeeService.read(directReport.getEmployeeId());
+            employeeDirectReports.add(directReport);
+        }
+        employee.setDirectReports(employeeDirectReports);
+
+        // create report
+        ReportingStructure report = new ReportingStructure();
+        report.setEmployee(employee);
+        report.setNumberOfReports();
+        // make sure report has correct values
+        LOG.debug("User [{}] has [{}] reports.", report.employee.getEmployeeId(), report.numberOfReports);
+
+        return report;
     }
 }
