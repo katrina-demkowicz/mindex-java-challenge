@@ -98,7 +98,7 @@ public class EmployeeServiceImplTest {
         // get John Lennon's report
         ReportingStructure report = restTemplate.getForEntity(employeeReportUrl, ReportingStructure.class, reportEmployee.getEmployeeId()).getBody();
         // the number of reports under John Lennon should be 4
-        assertEquals(4, report.numberOfReports);
+        assertEquals(4, report.getNumberOfReports());
     }
 
     private static void assertEmployeeEquivalence(Employee expected, Employee actual) {

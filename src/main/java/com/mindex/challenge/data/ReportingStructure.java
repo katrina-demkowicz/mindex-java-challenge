@@ -5,8 +5,8 @@ import org.slf4j.LoggerFactory;
 
 public class ReportingStructure {
 
-    public Employee employee;
-    public int numberOfReports; // number of reports under a given employee and under their reports
+    private Employee employee;
+    private int numberOfReports; // number of reports under a given employee and under their reports
 
     public ReportingStructure() {
     }

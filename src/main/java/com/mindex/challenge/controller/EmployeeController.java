@@ -68,7 +68,7 @@ public class EmployeeController {
         report.setEmployee(employee);
         report.setNumberOfReports();
         // make sure report has correct values
-        LOG.debug("User [{}] has [{}] reports.", report.employee.getEmployeeId(), report.numberOfReports);
+        LOG.debug("User [{}] has [{}] reports.", report.getEmployee().getEmployeeId(), report.getNumberOfReports());
 
         return report;
     }
