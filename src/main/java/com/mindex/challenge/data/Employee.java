@@ -1,5 +1,6 @@
 package com.mindex.challenge.data;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -65,25 +66,7 @@ public class Employee {
         return directReports;
     }
 
-    //return the number of reports under an employee and their reports
-    @JsonIgnore
-    public int getNumberOfReports() {
-        int numReports = 0; 
-
-        //check if employee has any direct reports
-        if (directReports != null) {
-            //recursively go through each employee and their direct reports
-            for (Employee employee: directReports) {
-                LOG.debug("[{}]", employee.getEmployeeId());
-                numReports += (1 + employee.getNumberOfReports());
-                LOG.debug("employee [{}] direct reports [{}] num reports [{}]", employee, employee.directReports, numReports);
-            }
-        }
-        
-        return numReports;
-    }
-
-    public void setDirectReports(List<Employee> directReports) {
+    public void setDirectReports(List<Employee> directReports) {       
         this.directReports = directReports;
     }
 }
