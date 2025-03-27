@@ -46,4 +46,20 @@ public class EmployeeServiceImpl implements EmployeeService {
 
         return employeeRepository.save(employee);
     }
+
+    /*
+     * Checks if an employee exists in the database. 
+     * Returns true if they exist, false if they dont.
+     */
+    public boolean employeeExists(String id) {
+
+        Employee employee = employeeRepository.findByEmployeeId(id);
+        boolean exists = false;
+
+        if (employee != null) {
+            exists = true;
+        }
+
+        return exists;
+    }
 }

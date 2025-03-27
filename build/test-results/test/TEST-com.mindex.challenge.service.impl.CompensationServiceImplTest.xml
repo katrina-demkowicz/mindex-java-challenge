@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.mindex.challenge.service.impl.CompensationServiceImplTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-03-27T20:14:07" hostname="KATSCOMPUTER" time="0.523">
+  <properties/>
+  <testcase name="testCreateRead" classname="com.mindex.challenge.service.impl.CompensationServiceImplTest" time="0.523"/>
+  <system-out><![CDATA[2025-03-27T16:14:06.457-04:00  INFO 21000 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mindex.challenge.service.impl.CompensationServiceImplTest]: CompensationServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-27T16:14:06.468-04:00  INFO 21000 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mindex.challenge.ChallengeApplication for test class com.mindex.challenge.service.impl.CompensationServiceImplTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.3)
+
+2025-03-27T16:14:06.505-04:00  INFO 21000 --- [    Test worker] c.m.c.s.i.CompensationServiceImplTest    : Starting CompensationServiceImplTest using Java 17.0.12 with PID 21000 (started by katde in C:\Users\katde\source\repos\mindex-java-challenge)
+2025-03-27T16:14:06.506-04:00 DEBUG 21000 --- [    Test worker] c.m.c.s.i.CompensationServiceImplTest    : Running with Spring Boot v3.2.3, Spring v6.1.4
+2025-03-27T16:14:06.506-04:00  INFO 21000 --- [    Test worker] c.m.c.s.i.CompensationServiceImplTest    : No active profile set, falling back to 1 default profile: "default"
+2025-03-27T16:14:06.629-04:00  INFO 21000 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2025-03-27T16:14:06.635-04:00  INFO 21000 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 2 MongoDB repository interfaces.
+2025-03-27T16:14:06.839-04:00  INFO 21000 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2025-03-27T16:14:06.851-04:00  INFO 21000 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-27T16:14:06.852-04:00  INFO 21000 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2025-03-27T16:14:06.915-04:00  INFO 21000 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-27T16:14:06.915-04:00  INFO 21000 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 408 ms
+2025-03-27T16:14:07.106-04:00  INFO 21000 --- [    Test worker] de.bwaldvogel.mongo.MongoServer          : started MongoServer(port: 51139, ssl: false)
+2025-03-27T16:14:07.115-04:00  INFO 21000 --- [    Test worker] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync", "version": "4.11.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/17.0.12+8-LTS-286"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@718fd7c1, com.mongodb.Jep395RecordCodecProvider@4bc6da03, com.mongodb.KotlinCodecProvider@4f59a516]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[kubernetes.docker.internal:51139], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2025-03-27T16:14:07.115-04:00  INFO 21000 --- [-server-worker2] d.b.mongo.wire.MongoWireProtocolHandler  : client [id: 0xf049b35d, L:/127.0.0.1:51139 - R:/127.0.0.1:51140] connected
+2025-03-27T16:14:07.115-04:00  INFO 21000 --- [-server-worker1] d.b.mongo.wire.MongoWireProtocolHandler  : client [id: 0xa85c8e6e, L:/127.0.0.1:51139 - R:/127.0.0.1:51141] connected
+2025-03-27T16:14:07.115-04:00  INFO 21000 --- [.internal:51139] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=kubernetes.docker.internal:51139, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=5732200}
+2025-03-27T16:14:07.200-04:00  INFO 21000 --- [-server-worker3] d.b.mongo.wire.MongoWireProtocolHandler  : client [id: 0x9dbb25b3, L:/127.0.0.1:51139 - R:/127.0.0.1:51142] connected
+2025-03-27T16:14:07.206-04:00  INFO 21000 --- [-server-worker3] d.b.mongo.backend.AbstractMongoBackend   : created database test
+2025-03-27T16:14:07.206-04:00  INFO 21000 --- [-server-worker3] d.b.mongo.backend.AbstractMongoDatabase  : adding unique _id index for collection employee
+2025-03-27T16:14:07.207-04:00  INFO 21000 --- [-server-worker3] d.b.mongo.backend.AbstractMongoDatabase  : created collection test.employee
+2025-03-27T16:14:07.421-04:00  INFO 21000 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 51143 (http) with context path ''
+2025-03-27T16:14:07.426-04:00  INFO 21000 --- [    Test worker] c.m.c.s.i.CompensationServiceImplTest    : Started CompensationServiceImplTest in 0.954 seconds (process running for 5.581)
+2025-03-27T16:14:07.806-04:00  INFO 21000 --- [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-27T16:14:07.807-04:00  INFO 21000 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-27T16:14:07.808-04:00  INFO 21000 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-03-27T16:14:07.894-04:00 DEBUG 21000 --- [o-auto-1-exec-1] c.m.c.controller.CompensationController  : Received compensation create request for [com.mindex.challenge.data.Compensation@4e1ea49a]
+2025-03-27T16:14:07.894-04:00 DEBUG 21000 --- [o-auto-1-exec-1] c.m.c.s.impl.CompensationServiceImpl     : Creating compensation [com.mindex.challenge.data.Compensation@4e1ea49a] for employee [16a596ae-edd3-4847-99fe-c4518e82c86f]
+2025-03-27T16:14:07.910-04:00  INFO 21000 --- [-server-worker3] d.b.mongo.backend.AbstractMongoDatabase  : adding unique _id index for collection compensation
+2025-03-27T16:14:07.912-04:00  INFO 21000 --- [-server-worker3] d.b.mongo.backend.AbstractMongoDatabase  : created collection test.compensation
+2025-03-27T16:14:07.942-04:00 DEBUG 21000 --- [o-auto-1-exec-2] c.m.c.controller.CompensationController  : Received employee create request for id [16a596ae-edd3-4847-99fe-c4518e82c86f]
+2025-03-27T16:14:07.942-04:00 DEBUG 21000 --- [o-auto-1-exec-2] c.m.c.s.impl.CompensationServiceImpl     : Creating compensation for employee [16a596ae-edd3-4847-99fe-c4518e82c86f]
+2025-03-27T16:14:07.950-04:00 DEBUG 21000 --- [o-auto-1-exec-2] c.m.c.s.impl.CompensationServiceImpl     : compensationId: [ad5bbf43-471d-4920-a6e5-5a30e6f26ec6]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
